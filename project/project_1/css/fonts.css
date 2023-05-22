@@ -1,0 +1,111 @@
+
+/* ПЕРВЫЙ СПОСОБ ПОДКЛЮЧЕНИЯ: */
+
+/* Локальное подключение списка начертаний шрифта Roboto. */
+/* Выбирать любое начертание будем указывая "значение цифрой" для свойства  font-weight. При этом для отдельного элемента HTML подключая семейство шрифтов  font-family: 'Roboto', sans-serif; где sans-serif - это общее семейство шрифтов, которое отработает только в том случае, если шрифт 'Roboto' не будет работать. 
+
+Как выбрать начертание для отдельного элемента HTML?
+Свойство font-weight: жирность выбрать для отдельного элемента HTML внизу цифрой;
+100 - Thing 
+300 - Light 
+400 - Regular 
+700 - Bold 
+900 - Black 
+*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.eot');
+    src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Black.woff') format('woff'),
+    url('../fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Roboto-Thin.ttf */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+    
+/* Roboto-Regular.ttf */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Roboto-Bold.ttf */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ------------------------------------------------------------------- */
+/* ВТОРОЙ СПОСОБ ПОДКЛЮЧЕНИЯ: */
+
+/* Теперь подключим список начертаний для семейства шрифтов Roboto. 
+Но теперь использовать эти дополнительные начертания для отдельного элемента HTML будем "по имени" начертания.  При этом подключая начертание шрифта только по имени font-family. 
+Например:  
+font-family: 'Roboto Bold Italic';  
+Как вы заметили, общее семейство шрифтов sans-serif в данном способе подключения "НЕуказывается". 
+Кстати в таком случае "ТОЛЬКО жирность" букв можно указывать при помощи свойства font-weight.
+В этом способе подключения начертания, font-weight никак НЕвыбирает начертание шрифта. 
+Свойство font-weight лучше вообще не подключать, в этом способе подключения начертания. 
+*/
+
+@font-face {
+    font-family: 'Roboto Bold Italic';   
+    src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Italic';
+    src: url('../fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Light Italic';   
+    src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    @font-face {
+    font-family: 'Roboto Medium Italic';
+    src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Thin Italic';
+    src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+

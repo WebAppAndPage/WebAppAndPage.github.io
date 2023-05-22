@@ -1,0 +1,561 @@
+* {  /*Для всех элементов на странице установить первоначальные значения. */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    color: rgb(0, 0, 0);
+}
+
+div.logo_text {
+    color: antiquewhite;
+}
+
+.promo {  /* Установим стили для первого раздела страницы. */
+
+    height: 800px; /* Это высота первого раздела страницы. То есть высота контейнера <section> */
+    /* width: 100vw; */
+
+
+    /* В файле style.css все пути прописываются начиная от местоположения файла style.css */
+    /* background-color: azure; */
+
+    /*параметры: путь к рисунку;  вдоль осей x,y;  растянуть вдоль осей x,y, чтобы картинка показывалась полностью, а не частями;  не повторять */
+    background: url("../img/main_bg.jpg") center center/cover no-repeat;
+    padding: 39px 0 62px 0; /* Внутренний отступ: Сверху, справа и так далее по часовой стрелке. */
+
+}
+
+.container {
+    position: relative;
+    width: 1140px;
+    
+    /* Два значения закоментировать. */
+    /* height: 400px; */
+    /* background-color: aquamarine; */
+
+    margin: 0 auto; /* применяется только к блочным элементам display:block;   Теперь container будет  находится по центру относительно родителя по горизонтальной оси. */
+
+}
+
+.logo .logo_img { /* то есть, применить стили к элементу logo_img который находится внутри блока logo*/
+
+    /*<img> это строчно-блочный элемент, поэтому для размещения <img> по-центру прийдется сначала превратить <img> в блочный элемент.*/
+    display: block;
+
+    /*Теперь можно применить центрирование по-горизонтали для блочных элементов.*/
+    margin: 0 auto; /* применяется только к блочным элементам display:block; Теперь <img> будет находится по центру относительно родителя по горизонтальной оси. */
+  
+}
+
+.logo .logo_text {
+    color: antiquewhite;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400; /* Жирность текста. */
+    line-height: 24px;/* межстрочный интервал. */
+    text-transform: uppercase; /* Преобразовать текст к верхнему регистру. */
+    text-align: center; /* текст по центру */
+    margin-top: 14px;
+}
+
+.title {
+    color: #f9bf3b;
+    
+    /* Локально. Их ненужно ниоткуда скачивать, потому что данное "общее семейство шрифтов" является предустановленным.*/
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */ 
+        
+
+    /* Установка жирности шрифта */
+    font-family: 'Roboto', sans-serif;
+
+     /* font-family: 'Roboto Bold Italic';  */
+     /* font-family: 'Roboto Italic'; */
+     /* font-family: 'Roboto Light Italic'; */
+     /* font-family: 'Roboto Medium'; */
+     /* font-family: 'Roboto Medium Italic'; */
+     /* font-family: 'Roboto Thin Italic'; */
+
+    /* Через этот параметр можно задавать жирность шрифта. 
+    Соответствует жирности "Roboto - Black" 900 */
+    font-weight: 300; 
+
+    
+
+    font-size: 41px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.simple .title_big { /* Читать: title_big, находящийся внутри simple. */
+    color: #ffffff;
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+
+    font-size: 80px;
+    /* line-height: 100px; */
+    text-align: center;
+    margin-top: 21px;
+    text-transform: uppercase;
+
+}
+
+h1 {
+    margin-top: 53px;
+}
+
+h2.title { /* Только тот заголовок h2 у которого имя класса = title*/
+    margin-top: 30px;
+}
+
+.promo .promo_text {
+    color:#ffffff;
+    font-size: 21px;
+
+    font-family: 'Roboto', sans-serif;  
+    font-weight: 300; /* Соответствует толщине "Roboto Light" */
+
+    line-height: 28px;
+    /* font-family: "Roboto Light"; */
+    text-align: center;
+
+    margin-top: 23px;
+    padding: 0 13px;
+}
+
+.promo .promo_text span { /* Тот span который находится внутри promo_text, который находится в promo. */
+    color: #f9bf3b;
+
+    font-family: 'Roboto', sans-serif;  
+    font-weight: 700; /* Соответствует толщине "Roboto Bold" */
+    /* font-family: "Roboto — Bold"; */  
+}
+
+.promo .promo_btn { /* Стиль для кнопки <button class="promo_btn">, находящейся именно в разделе <section class="promo"> */
+    
+    /* Для выравнивания кнопки по горизонтали по центру. */
+    display: block;
+    margin: 0 auto; /* 0 - по вертикали и auto - по горизонтали. */
+    margin-top: 73px;
+
+    /* Ширина и высота кнопки. */
+    width: 313px;
+    height: 72px;
+
+    /*box-shadow это свойство для установки тени, которая отбрасывается кнопкой: тень вовнутрь; смещение тени по оси X,Y; размытость тени;цвет тени. */
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18);
+    border: 4px solid rgba(0, 0, 0, 0.23);
+
+    /* Заполнить кнопку можно не только рисунком но и градиентом. */
+    background-image: linear-gradient(to top, #2798b9 0%, #3ab6da 100%);
+
+    /* Стиль для текста, который внутри кнопки. */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    /* Вид курсора, который будет отображаться на экране при наведении мыши на кнопку. */
+    cursor: pointer;
+
+    /* Чтобы убрать обводку вокруг кнопки. */
+    outline: none;
+}
+
+.more {
+    margin-top: 73px;
+
+}
+
+.more .more_text { /* Стиль для текста вконце первой части страницы. */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.more .more_img {
+    width: 29px; /* Сделать так, чтобы картинка more_img была нормального размера. */
+
+    display: block; /* Превратить элемент more_img в блочный элемент для дальнейшего выравнивания. */
+    margin: 0 auto; /* Выровнять по-центру для блочного элемента. */
+
+    margin-top: 13px; 
+}
+
+.waiting {
+    min-height: 604px;
+    background-color: #efefef;
+    padding: 85px 0 75px 0;
+}
+
+ .waiting .waiting_header, .finish .finish_header {
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    /* line-height: 12px; */
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+.finish .finish_header {
+    color: #fff;
+}
+
+.waiting .waiting_divider, .finish .finish_divider { /* Полоска. */
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+    margin: 0 auto; /* Для размещения блочного элемента по-центру. */
+    margin-top: 18px;
+}
+
+.waiting .waiting_subheader {
+    margin-top: 17px;
+    color: #4a4a4a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    /* line-height: 20px; */
+
+    text-align: center;
+}
+
+
+/* Изучение технологии Flex Box. Урок 19. */
+
+.waiting .waiting_wrapper { /* Обёртка для трёх элементов. */
+    
+    display: flex; /* Технология Flex. */
+    justify-content: space-between;
+
+    margin-top: 45px;
+}
+
+.waiting_wrapper .waiting_item {
+    /* display: inline-block; */ /* Для размещения нескольких элементов по-горизонтали. */
+    /* vertical-align: top; */ /* Для выравнивания нескольких элементов по верхней границе. */
+
+    /* margin: 0 15px; */ /* Отступы по-вертикали и по-горизонтали. */
+    width: 329px;
+    text-align: center;
+}
+
+.waiting_wrapper .waiting_item .waiting_img {
+    width: 100%; /* Чтобы любая картинка waiting_img была по-ширине равна 100% от ширины родителя waiting_item*/
+
+    /* height: 201px; */
+}
+
+.waiting_wrapper .waiting_item .waiting_descr {
+    margin-top: 33px;
+
+    color: #4a4a4a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+} 
+
+/* --------------------------------------------- */
+/* Изучение технологии Flex Box. Урок 19. Начало.*/
+/* --------------------------------------------- */
+ 
+.my-flex-container { /* Контейнер-родитель. */
+    background-color: rgb(82, 68, 80);
+
+    display: flex;
+    /* flex-direction: column; */ /* Направление главной оси по-вертикали. */
+    flex-wrap: wrap; /* Перенос вложенных квадратиков на новую строку. */
+    justify-content: space-around; /* По-главной оси выравнивание. Здесь - по-горизонтали.*/
+    align-items: center; /* По-поперечной оси выравнивание. Здесь по-вертикали.*/
+    
+    height: 450px; /* Высота контейнера. */
+}
+
+.my-flex-container .my-flex-block { /* Блок, который внутри контейнера. */
+    width: 150px;
+    height: 150px;
+    background-color: red; /* Цвет фона. */
+    /* background-color: rgba(39, 204, 176, 0.836); */
+    text-align: center; /* По-вертикали выравнивание. */
+    color: #fff; /* Цвет текста - белый. */
+    /* margin: 0 50px; */ /* Справа и слева отступы от квадратика. */
+}
+
+
+/* -------------------------------------------------*/
+/* Изучение технологии Flex Box. Урок 19. Завершен. */
+/* -------------------------------------------------*/
+
+
+/* -------------------------------------------------*/
+/* Урок 1.20. Завершение проекта. */
+/* -------------------------------------------------*/
+
+.optimization {
+    min-height: 550px;
+    padding: 102px 0 107px 0;
+    margin-bottom: -60px;
+}
+
+.optimization_text p {
+    margin-top: 15px;
+}
+
+.optimization .optimization_header {
+    margin-left: 391px;
+
+    color: #299CBD;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    /* line-height: 30px; */
+    text-transform: uppercase;
+}
+
+.optimization .optimization_text {
+    margin-left: 391px;
+    margin-top: 25px;
+     /* Соответствует Roboto Light */
+    color: #4A4A4A;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300; /* Соответствует начертанию Roboto Light. */
+    font-size: 17px;
+    line-height: 27px;
+
+}
+
+.optimization .optimization_text span {
+    color: #4A4A4A;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700; /* Соответствует начертанию Roboto-Bold */
+}
+
+
+/* Для родителя установили  position: relative; */
+.optimization .optimization_img {
+
+    position: absolute; /* Будем картинку позиционировать "относительно родителя" <div class="container"> внутри которого находится эта картинка. */
+
+    top: -54px; /* Указываем позиционирование "от верха родителя" отступить вниз 48 пикселей. */
+    left: -117px; /* Указываем позиционирование: сдвинем картинку "от левого края родителя" влево на 240 пикселей. */
+
+    z-index: -1; /* Сделаем так, чтобы картинка частично ушла под текст. */
+}
+
+.finish {
+    min-height: 447px;
+    padding: 86px 0 79px 0; /* ОТСТУПЫ: вверху, справа, внизу, слева. */
+    background: url('../img/second_bg__4_chapter_background.jpg') center center/cover no-repeat;
+
+}
+
+.finish .finish_wrapper {
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.finish .finish_wrapper .finish_item {
+    width: 204px;
+
+}
+
+.finish .finish_wrapper .finish_item .finish_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 115px;
+    height: 115px;
+    background-color: #b4e2ff;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+.finish .finish_wrapper .finish_item .finish_descr {
+    margin-top: 25px;
+    text-align: center;
+
+    color: #efefef;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    font-size: 17px;
+    line-height: 20px;
+}
+
+/* ---------------------------------------------- */
+
+.chapter_5_gift {
+
+    background: #EFEFEF;
+    min-height: 631px;
+    padding: 88px 0 88px 0;
+
+}
+
+.chapter_5_container__text {
+    
+    margin-top: 45px;
+    color: #252525;
+    width: 1161px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+}
+
+
+.chapter_5_container { /* Flex-контейнер. */
+    
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.gift {
+    height: 174px;
+    width: 154px;
+  
+}
+
+.btn_chapter_5 {
+
+    margin-top: 51px;
+    width: 313px;
+    height: 72px;
+
+    border: 3px solid rgb(0, 0, 0, 0.20);
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to top, #2798b9, #3ab6da);
+  
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
+
+.chapter_6 {
+
+    background-color: #fff;
+    min-height: 514px;
+    padding: 89px 280px 51px 283px;
+}
+
+.chapter_6_container {
+    background-color: inherit; /* То есть, унаследовать цвет фона от родителя. */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.chapter_6_first {
+    margin-top: 36px;
+
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    
+}
+
+.chapter_6_text {
+    margin-top: 26px;
+
+    color: #299CBD;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 36px;
+
+    text-transform: uppercase;
+}
+
+.chapter_6_text_2 {
+    margin-top: 25px;
+
+    color: #4A4A4A;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 20px;
+  
+}
+
+/* ------------------------------- */
+
+.footer_chapter_7 {
+    background: #1A1A1A;
+    color: #888888;
+    min-height: 169px;
+    padding: 57px 366px 68px 367px;
+}
+
+.chapter_7_container {
+    background: inherit;
+    color: #888888;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    text-align: center;
+    
+}
+
+.footer_chapter_7 a {
+    color: #888888;
+    text-decoration-line: underline;
+}
